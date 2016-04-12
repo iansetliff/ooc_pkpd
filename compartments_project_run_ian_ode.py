@@ -34,7 +34,7 @@ na.model.parameters
 na.model.observables
 na.model.initial_conditions
 na.model.rules
-
+tspan=2000
 
 t0=time()
 y = odesolve(na.model, tspan)
@@ -47,7 +47,7 @@ gs = gridspec.GridSpec(5,1,width_ratios=[1],height_ratios=[1,1,1,1,1])
 ax1 = plt.subplot(gs[0])
 plt.plot(tspan, y['Glu_brain'], label='glu_brain', color='r')
 plt.legend('',frameon=False) # remove legend
-plt.xlim([0,t_end])        # set x lim
+plt.xlim([0,tspan])        # set x lim
 #plt.xlabel('')               # remove x ticks
 #plt.yticks([])               # remove y lim
 plt.xticks([])
